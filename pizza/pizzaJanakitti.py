@@ -14,12 +14,6 @@ def getData(file):
         pizzaArray.append(list(dataset[i]))
     return(R, C, L, H, pizzaArray)
 
-pizza = getData("d_small.txt")[4:][0]
-height = int(getData("d_small.txt")[0])
-width = int(getData("d_small.txt")[1])
-minTopp = getData("d_small.txt")[2]
-maxSize = getData("d_small.txt")[3]
-
 def totalSliceTypes(maxSize): # Returns all legal slice dimensions
     sliceSet = []
     for area in range (1, maxSize+1):
@@ -44,5 +38,13 @@ def maxedSliceTypes(maxSize): # Returns all slice dimensions of the maximum area
         sliceGroup.append([factor, int(maxSize/factor)])
     return(sliceGroup)
 
+def sliceCoords():
+    
+
+pizza = getData("d_small.txt")[4:][0]
+height = int(getData("d_small.txt")[0])
+width = int(getData("d_small.txt")[1])
+minTopp = getData("d_small.txt")[2]
+maxSize = getData("d_small.txt")[3]
 
 totalSliceTypes(4)
